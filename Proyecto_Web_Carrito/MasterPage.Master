@@ -11,7 +11,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+        <div class="container-fluid">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEO0lEQVR4nO2YbUgbZxzAr/tQRsGxglvZmGMfBibR+TKtZRIan5sIMhxj1LF1EhW2Ugqd+mFoTDYns9VZrB26ro6O6l2aQdjaJlI/bB805C4UIRZj7jEzIbaNqXl/KW2FMveMuxhxxrG7pMak5Ac/CPnw3PPL/fMkHIblyJEjx55yaOzOe4cuOVfyR5yug8OOeizbePnHZVf+iBO9OOxAb1xYQnqacepoODh1a+kFLBvIH3G62M3nDdpRwXkb0ptgTJqhpqeXn8cynYPDjvq8QbvrwFnbvQN9tnq9Cb6tN0EHGzFJwc+xbOQGDT/euAu/Y9nIbwb4ykZABCG0D8tG3teE/mrQhFGtOmrHiQgFiMgkTkYIQEYHcDLaBoiQHCdCDbUTISkYDxbVavyvYpnEcW3Ag5MPUMzoDkZ2MLyGE+H7gAgzOBGmABGexMkwAcjQAE6GYtFXQw21V0NSoNnl6M+ueQzCA7iIRNWh/zCIcDL4GJCBezgZuA3I4B+4OqABav8IIP3fADJwGpC+TwAZqHtX4yuv+yVY0NODnuMVcOq6ty8tAeqdDOygPybp1/IKOH5xsaLmzBKqG3KsV/Uvm4+cu0tXX1gxSH/wTEvHvAbZZT8tuxI04+NhGyAibkBGHqUjAKh90zyHCO2rUjHrZQqISjdlYnbHLNlmaTdcK/saest7bY7KM3bL4e+cs1VDd6nqUdeMdGzVcPSyh5Jd8c3WTAQsNUTQAciAV3AA6RvlGYBhdWehT0gA61uc1gSLldtdQEWsKuvjkl7oLu3701YxsGQ+POSkj3x/x/DORdeM9Ce34ejPq7Rs3GPGJ3w2QPrc+ITnJO+AD84xVKoBxZ1zSNJOIXEHhYq65hIDlP9WElcV18Ip3rBQuVDDO+DYeWYg1QB285FHT1D44RMuItWANxVzL/EOAN8uVKcaIG43ojjiDmNqAUqLHxOCpMe6v0LJ/J0xAap5vifQ1rsAg0ICijtvc2MTV9w2sxkgapvhxiimEUm6zEJHiP8JFEfWa70pJEDSTnMz/3+w3wlRh1FQgOir+VOCA8oV1tNCA9jN7U6ARSY4oKTTKk1mhNjZ5/xi+wgZN5UIHCFBJ1Ccwi8X80q7mPW9/hKLlBav4M1v3gUFtO91gDiZE2hLgDaVHzJ23p/CD9lo8gFdULHXfyVEyZxAccoUULZrf+aU/AIKuy2VSQdojdbXT1yCa5Wq9AeIVZaHYtV8P5YKOhPzK/uUQmeCN6duzb+GZRt6E/OADcjKzT8TATqaucaNEA2nrs8uFGDZxg1qsVBHw+Dmg990SzNUyhHs+OhNUKujmWi6A3Q0NGJPi0+bWweamlvRVtn3MnXdBJqaW+6zi3947CNO7kLy1lUsQ9dNoEne4k64UHPrCpah6/K61U3ylv5MXTeBxsbG/dzF2E9M3uJmX7PvYRm6bo4czzr/ANbKIKwSaTJEAAAAAElFTkSuQmCC">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Hidden brand</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+
 </head>
+
 
 <body>
     <h1>Master Page de prueba</h1>
