@@ -86,6 +86,70 @@ namespace TP2_WinForm.Negocio
             }
         }
 
+        public List<Articulos> ListarArticulosConProcedimiento()
+        {
+            List<Articulos> lista = new List<Articulos>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                //  datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion AS ArticuloDescripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id JOIN IMAGENES I ON A.Id = I.IdArticulo");
+                datos.setearProcedimiento("storedListarArticulos");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulos aux = new Articulos();
+                    aux.IdArticulo = (int)datos.Lector["Id"];
+                    aux.CodArticulo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["ArticuloDescripcion"];
+
+
+                    if (!Convert.IsDBNull(datos.Lector["Marca"]))
+                    {
+                        aux.Marcas.Descripcion = (string)datos.Lector["Marca"];
+                    }
+                    else
+                    {
+                        aux.Marcas.Descripcion = "";
+                    }
+
+                    if (!Convert.IsDBNull(datos.Lector["Categoria"]))
+                    {
+                        aux.Categorias.Descripcion = (string)datos.Lector["Categoria"];
+                    }
+                    else
+                    {
+                        aux.Categorias.Descripcion = "https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542";
+                    }
+
+
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+                    if (!Convert.IsDBNull(datos.Lector["ImagenUrl"]))
+                    {
+                        aux.Imagen = (string)datos.Lector["ImagenUrl"];
+                    }
+                    else
+                    {
+
+                    }
+
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
         public void AgregarArticulo(Articulos nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
