@@ -22,7 +22,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Ver carrito</a>
+                        <a class="nav-link active" href="Carrito.aspx">Ver carrito</a>
                     </li>
                 </ul>
 
