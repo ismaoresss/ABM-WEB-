@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>ABM ARTICULOS</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -40,9 +40,9 @@
             </div>
 
         </div>
-        <form class="d-flex " role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+         <form class="d-flex " role="search">
+            <input class="d-flex" type="search" placeholder="Buscar..." aria-label="Buscar">
+             <%--<asp:TextBox runat="server"></asp:TextBox>--%>
         </form>
 
     </nav>
