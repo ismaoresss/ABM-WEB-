@@ -25,9 +25,9 @@
                         <a class="nav-link active" href="Carrito.aspx">Ver carrito</a>
                     </li>
                 </ul>
-
-
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEO0lEQVR4nO2YbUgbZxzAr/tQRsGxglvZmGMfBibR+TKtZRIan5sIMhxj1LF1EhW2Ugqd+mFoTDYns9VZrB26ro6O6l2aQdjaJlI/bB805C4UIRZj7jEzIbaNqXl/KW2FMveMuxhxxrG7pMak5Ac/CPnw3PPL/fMkHIblyJEjx55yaOzOe4cuOVfyR5yug8OOeizbePnHZVf+iBO9OOxAb1xYQnqacepoODh1a+kFLBvIH3G62M3nDdpRwXkb0ptgTJqhpqeXn8cynYPDjvq8QbvrwFnbvQN9tnq9Cb6tN0EHGzFJwc+xbOQGDT/euAu/Y9nIbwb4ykZABCG0D8tG3teE/mrQhFGtOmrHiQgFiMgkTkYIQEYHcDLaBoiQHCdCDbUTISkYDxbVavyvYpnEcW3Ag5MPUMzoDkZ2MLyGE+H7gAgzOBGmABGexMkwAcjQAE6GYtFXQw21V0NSoNnl6M+ueQzCA7iIRNWh/zCIcDL4GJCBezgZuA3I4B+4OqABav8IIP3fADJwGpC+TwAZqHtX4yuv+yVY0NODnuMVcOq6ty8tAeqdDOygPybp1/IKOH5xsaLmzBKqG3KsV/Uvm4+cu0tXX1gxSH/wTEvHvAbZZT8tuxI04+NhGyAibkBGHqUjAKh90zyHCO2rUjHrZQqISjdlYnbHLNlmaTdcK/saest7bY7KM3bL4e+cs1VDd6nqUdeMdGzVcPSyh5Jd8c3WTAQsNUTQAciAV3AA6RvlGYBhdWehT0gA61uc1gSLldtdQEWsKuvjkl7oLu3701YxsGQ+POSkj3x/x/DORdeM9Ce34ejPq7Rs3GPGJ3w2QPrc+ITnJO+AD84xVKoBxZ1zSNJOIXEHhYq65hIDlP9WElcV18Ip3rBQuVDDO+DYeWYg1QB285FHT1D44RMuItWANxVzL/EOAN8uVKcaIG43ojjiDmNqAUqLHxOCpMe6v0LJ/J0xAap5vifQ1rsAg0ICijtvc2MTV9w2sxkgapvhxiimEUm6zEJHiP8JFEfWa70pJEDSTnMz/3+w3wlRh1FQgOir+VOCA8oV1tNCA9jN7U6ARSY4oKTTKk1mhNjZ5/xi+wgZN5UIHCFBJ1Ccwi8X80q7mPW9/hKLlBav4M1v3gUFtO91gDiZE2hLgDaVHzJ23p/CD9lo8gFdULHXfyVEyZxAccoUULZrf+aU/AIKuy2VSQdojdbXT1yCa5Wq9AeIVZaHYtV8P5YKOhPzK/uUQmeCN6duzb+GZRt6E/OADcjKzT8TATqaucaNEA2nrs8uFGDZxg1qsVBHw+Dmg990SzNUyhHs+OhNUKujmWi6A3Q0NGJPi0+bWweamlvRVtn3MnXdBJqaW+6zi3947CNO7kLy1lUsQ9dNoEne4k64UHPrCpah6/K61U3ylv5MXTeBxsbG/dzF2E9M3uJmX7PvYRm6bo4czzr/ANbKIKwSaTJEAAAAAElFTkSuQmCC">
+                <a href="Carrito.aspx">
+                    <img width=50px src="https://cdn-icons-png.flaticon.com/128/2098/2098528.png">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="badge text-bg-secondary">New</span>
