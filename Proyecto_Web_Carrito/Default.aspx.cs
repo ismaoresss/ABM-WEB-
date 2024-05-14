@@ -11,11 +11,21 @@ namespace Proyecto_Web_Carrito
 {
     public partial class Default : System.Web.UI.Page
     {
-        public List<Articulos> ListaArticulos { get; set; }
+        public List<Articulos> ListaArticulos;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticulosNegocio negocio = new ArticulosNegocio();
-            ListaArticulos = negocio.ListarArticulosConProcedimiento();
+            if (Session["listaArticulos"] != null)
+            {
+                ListaArticulos = (List<Articulos>)Session["listaArticulos"];
+            }
+            else
+            {
+                ArticulosNegocio negocio = new ArticulosNegocio();
+                ListaArticulos = negocio.ListarArticulosConProcedimiento();
+                Session.Add("listaArticulos", ListaArticulos);
+            }
+
+
         }
     }
 }

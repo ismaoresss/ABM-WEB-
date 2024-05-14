@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-   public class Articulos
-     
+    public class Articulos
+
     {
         public Articulos()
         {
@@ -17,7 +17,7 @@ namespace Dominio
             CodArticulo = "";
             Nombre = "";
             Descripcion = "";
-            Marcas = new Marcas();  
+            Marcas = new Marcas();
             Categorias = new Categorias();
             Imagen = "";
             Precio = 0;

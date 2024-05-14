@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div>
-    
+
         <header id="header">
             <h1>Elementos del carrito</h1>
             <div>
@@ -23,6 +23,8 @@
             <div class="informacionCompra" id="informacionCompra">
                 <h2>ACA FIGURARAN LOS ELEMENTOS</h2>
                 <p class="x" id="x">x</p>
+                <asp:GridView ID="dgvCarrito" runat="server"></asp:GridView>
+                <a href="Default.aspx" class="btn btn-secondary">Volver a la lista de productos</a>
             </div>
 
             <div class="productosCompra" id="productosCompra"></div>
