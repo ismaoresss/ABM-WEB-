@@ -29,8 +29,9 @@
 
             <div class="productosCompra" id="productosCompra"></div>
             <div class="total" id="total"></div>
-            <button>Finalizar Compra</button>
+            <asp:Button Text="Finalizar Compra" ID="FinalizarCompra" OnClick="FinalizarCompra_Click" runat="server" />
         </div>
+        <a href="/" class="btn btn-secondary" >Volver</a>
 
     </div>
 

@@ -35,11 +35,25 @@ namespace Proyecto_Web_Carrito
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace);
-               
+                MessageBox.Show("Fallo algo por aca papá");
             }
-            
-            
+
+
+        }
+
+        protected void FinalizarCompra_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Que disfrutes tu compra :)");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }
