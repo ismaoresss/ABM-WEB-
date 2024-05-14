@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Proyecto_Web_Carrito
 {
-    public partial class Carrito1 : System.Web.UI.Page
+    public partial class Carrito : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
