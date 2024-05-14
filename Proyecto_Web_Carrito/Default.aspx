@@ -3,6 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <nav class="navbar bg-body-tertiary">
+        <div class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+            <%--<button class="btn btn-outline-success" type="submit">Search</button>--%>
+        </div>
+    </nav>
 
     <h2>Lista articulos:</h2>
     <br>
