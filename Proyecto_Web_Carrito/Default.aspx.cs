@@ -34,6 +34,7 @@ namespace Proyecto_Web_Carrito
             //Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
             List<Articulos> listaFiltrada;
             string filtro = txtBuscar.Text.ToLower();
+            
 
             if (filtro.Length >= 2)
             {

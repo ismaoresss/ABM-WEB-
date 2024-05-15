@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <nav class="presentacion">
+    <nav class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill">
         <div class="d-flex" role="search">
-            <asp:TextBox Text="Buscar..." AutoPostBack="true" ID="txtBuscar" CssClass="form-control me-2" runat="server" OnTextChanged="txtBuscar_TextChanged" ></asp:TextBox>
+            <asp:TextBox Text="Buscar..." AutoPostBack="true" ID="txtBuscar" CssClass="form-control me-2" runat="server" OnTextChanged="txtBuscar_TextChanged"  ></asp:TextBox>
         </div>
     </nav>
 
