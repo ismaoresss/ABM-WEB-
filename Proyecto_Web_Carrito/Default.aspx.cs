@@ -49,13 +49,13 @@ namespace Proyecto_Web_Carrito
             {
                 Session.Add("listaArticulos", listaFiltrada);
             }
-            else
-            {
-                if(txtBuscar.Text == "")
-                {
-                    Session.Add("listaArticulos", ListaArticulos);
-                }
-            }
+            //else
+            //{
+            //    if(txtBuscar.Text == "")
+            //    {
+            //        Session.Add("listaArticulos", ListaArticulos);
+            //    }
+            //}
             
             
         }
