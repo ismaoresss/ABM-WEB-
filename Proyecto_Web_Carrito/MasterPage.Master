@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                         <a href="Carrito.aspx">
-                            <img width="50%" src="https://cdn-icons-png.flaticon.com/128/2098/2098528.png">
+                            <img width=30px src="https://cdn-icons-png.flaticon.com/128/2098/2098528.png">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,6 @@
 
                         <div class="counter-container">
                             <span class="counter-value">0</span>
-                            <span class="counter-label">Productos</span>
                         </div>
                     </div>
                 </div>

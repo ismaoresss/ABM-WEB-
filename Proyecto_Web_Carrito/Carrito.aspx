@@ -32,7 +32,6 @@
                         <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
                         <asp:BoundField DataField="Precio" HeaderText="Precio" />
 
-
                     </Columns>
                 </asp:GridView>
                 <a href="Default.aspx" class="btn btn-primary">Volver a la lista de productos</a>
