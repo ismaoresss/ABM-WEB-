@@ -1,6 +1,7 @@
 ﻿using Dominio;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +27,28 @@ namespace Proyecto_Web_Carrito
             }
 
 
+        }
+
+        protected void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            //Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
+            List<Articulos> listaFiltrada;
+            string filtro = txtBuscar.Text.ToLower();
+
+            if (filtro.Length >= 2)
+            {
+                listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToLower().Contains(filtro) || X.CodArticulo.ToLower().Contains(filtro));
+            }
+            else
+            {
+                listaFiltrada = ListaArticulos;
+            }
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+
+            ////Ocultar columnas
+            //dgvArticulos.Columns["IdArticulo"].Visible = false;
+            //dgvArticulos.Columns["Imagen"].Visible = false;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Proyecto_Web_Carrito
         {
             try
             {
-                if (IsPostBack)
+                if (!IsPostBack)
                 {
                     List<Articulos> carrito;
                     carrito = Session["carrito"] != null ? (List<Articulos>)Session["carrito"] : new List<Articulos>();
@@ -35,7 +35,7 @@ namespace Proyecto_Web_Carrito
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Fallo algo por aca papá");
+                MessageBox.Show(ex.ToString());
             }
 
 

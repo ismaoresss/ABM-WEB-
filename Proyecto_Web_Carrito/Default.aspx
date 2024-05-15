@@ -3,11 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <nav class="navbar bg-body-tertiary">
+    <nav class="presentacion">
         <div class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-            <%--<button class="btn btn-outline-success" type="submit">Search</button>--%>
+            <asp:TextBox Text="Buscar..." AutoPostBack="true" ID="txtBuscar" CssClass="form-control me-2" runat="server" OnTextChanged="txtBuscar_TextChanged" ></asp:TextBox>
         </div>
     </nav>
 
