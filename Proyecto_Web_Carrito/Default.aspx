@@ -26,6 +26,7 @@
                     <a href="DetalleArticulo.aspx?id=<%: articulo.IdArticulo %>">Ver más</a>
 
                 </div>
+
                 <a href="Carrito.aspx?id=<%: articulo.IdArticulo %>" class="btn btn-primary">Agregar al carrito</a>
             </div>
         </div>

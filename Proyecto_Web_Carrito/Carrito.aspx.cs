@@ -13,6 +13,7 @@ namespace Proyecto_Web_Carrito
 {
     public partial class Carrito1 : System.Web.UI.Page
     {
+        int contador;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -31,7 +32,9 @@ namespace Proyecto_Web_Carrito
 
                     dgvCarrito.DataSource = carrito;
                     dgvCarrito.DataBind();
+                    contador++;
                 }
+                    Session.Add("conta", contador);
             }
             catch (Exception ex)
             {
