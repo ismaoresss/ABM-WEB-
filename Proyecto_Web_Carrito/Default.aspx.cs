@@ -38,18 +38,26 @@ namespace Proyecto_Web_Carrito
 
             if (filtro.Length >= 2)
             {
-                listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToLower().Contains(filtro) || X.CodArticulo.ToLower().Contains(filtro));
+                listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToLower().Contains(filtro));
             }
             else
             {
                 listaFiltrada = ListaArticulos;
             }
-            dgvArticulos.DataSource = null;
-            dgvArticulos.DataSource = listaFiltrada;
 
-            ////Ocultar columnas
-            //dgvArticulos.Columns["IdArticulo"].Visible = false;
-            //dgvArticulos.Columns["Imagen"].Visible = false;
+            if (Session["listaArticulos"] != null)
+            {
+                Session.Add("listaArticulos", listaFiltrada);
+            }
+            else
+            {
+                if(txtBuscar.Text == "")
+                {
+                    Session.Add("listaArticulos", ListaArticulos);
+                }
+            }
+            
+            
         }
     }
 }

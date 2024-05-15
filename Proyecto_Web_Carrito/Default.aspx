@@ -3,9 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
+    <link href="EstilosParaIsma.css" rel="stylesheet" />
+
+
+    <div class="reflected-header" style="text-shadow: 2px 2px #a732da;">
+        <h1>Llego la MaxiSale, con el codigo 'PIPPOL' 30% off</h1>
+    </div>
+
     <nav class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill">
         <div class="d-flex" role="search">
-            <asp:TextBox Text="Buscar..." AutoPostBack="true" ID="txtBuscar" CssClass="form-control me-2" runat="server" OnTextChanged="txtBuscar_TextChanged"  ></asp:TextBox>
+            <asp:TextBox placeholder="Buscar..." AutoPostBack="true" ID="txtBuscar" CssClass="form-control me-2" runat="server" OnTextChanged="txtBuscar_TextChanged"></asp:TextBox>
         </div>
     </nav>
 
