@@ -33,7 +33,7 @@
                                 <a class="nav-link active" href="Carrito.aspx">Ver carrito</a>
                             </li>
                         </ul>
-                       
+
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             <span class="badge text-bg-secondary">New</span>
@@ -65,7 +65,7 @@
         <br />
         <footer>
             <div class="car bg-dark text-white" style="text-align: center">
-                Copyright &copy 2024 All Rights Reserved
+                <p>Desarrollado por Ismael Oreste, Facundo Pino y Pedro Quiros</p>
             </div>
         </footer>
     </form>

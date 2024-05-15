@@ -56,8 +56,7 @@ namespace Proyecto_Web_Carrito
             //        Session.Add("listaArticulos", ListaArticulos);
             //    }
             //}
-            
-            
+
         }
     }
 }
