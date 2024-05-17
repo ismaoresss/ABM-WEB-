@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
     <link href="EstilosParaIsma.css" rel="stylesheet" />
 
-
+    
     <div class="reflected-header" style="text-shadow: 2px 2px #a732da;">
         <h1>PROGRAMACION 3</h1>
     </div>

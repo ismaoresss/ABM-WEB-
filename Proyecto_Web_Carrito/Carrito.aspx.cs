@@ -25,7 +25,6 @@ namespace Proyecto_Web_Carrito
                     repListado.DataSource = seleccionados;
                     repListado.DataBind();
                 }
-
             }
             //if (Session["Seleccionados"] != null)
             //{
@@ -55,8 +54,6 @@ namespace Proyecto_Web_Carrito
             //    }
 
             //}
-
-
         }
 
         protected void FinalizarCompra_Click(object sender, EventArgs e)
@@ -65,6 +62,14 @@ namespace Proyecto_Web_Carrito
 
             MessageBox.Show("Que disfrutes tu compra :)");
             Response.Redirect("Default.aspx");
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            List<Articulos> arti = new List<Articulos>();
+            Session["Seleccionados"] = arti;
+            repListado.DataSource = arti;
+            repListado.DataBind();
         }
     }
 }
