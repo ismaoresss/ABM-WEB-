@@ -16,16 +16,21 @@ namespace Proyecto_Web_Carrito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             if (Session["Seleccionados"] != null)
             {
                 List<Articulos> seleccionados = (List<Articulos>)Session["Seleccionados"];
 
                 if (!IsPostBack)
                 {
+                    lblTotal.Text = "Total: $" + seleccionados.Sum(x => x.Precio).ToString();
                     repListado.DataSource = seleccionados;
                     repListado.DataBind();
+
                 }
             }
+
             //if (Session["Seleccionados"] != null)
             //{
             //    List<Articulos> seleccionados = (List<Articulos>)Session["Seleccionados"];

@@ -20,7 +20,7 @@
 .contador {
     margin-left: 30px;
     margin-right: 10px;
-    background-color:black;
+    background-color: black;
     color: #ffffff;
     border-radius: 50%;
     width: 30px;
@@ -53,5 +53,10 @@ h1 {
     animation: reflect 3s infinite;
 }
 
-
-
+#bannerCarrito {
+    background-color: #ffed9d;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}

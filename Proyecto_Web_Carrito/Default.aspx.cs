@@ -21,8 +21,8 @@ namespace Proyecto_Web_Carrito
 
             if (!IsPostBack)
             {
-               idRep.DataSource = ListaArticulos;
-               idRep.DataBind();
+                idRep.DataSource = ListaArticulos;
+                idRep.DataBind();
             }
             //if (Session["listaArticulos"] != null)
             //{

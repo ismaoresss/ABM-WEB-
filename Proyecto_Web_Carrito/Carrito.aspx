@@ -8,13 +8,15 @@
     <div>
 
         <header id="header">
-            <%-- <h1 class="text-info d-flex justify-content-center">Mi carrito de compras </h1>--%>
-            <div>
-                <img id="carrito" class="carrito rounded mx-auto d-block" src="https://cdn-icons-png.flaticon.com/128/2098/2098528.png" alt="">
-                <h1 class="text-info d-flex justify-content-center">Mi carrito de compras </h1>
-                <br />
+            <img id="carrito" class="carrito rounded mx-auto d-block" src="https://cdn-icons-png.flaticon.com/128/2098/2098528.png" alt="">
+            <div id="bannerCarrito">
+                <h1>Mi carrito de compras </h1>
+                <asp:Label ID="lblTotal" runat="server"></asp:Label>
+
                 <div id="numero"></div>
             </div>
+            <br />
+
         </header>
 
         <main>
@@ -25,7 +27,7 @@
             <div class="informacionCompra" id="informacionCompra">
 
                 <section class="body-def">
-                    
+
 
                     <asp:Repeater runat="server" ID="repListado">
                         <ItemTemplate>
@@ -36,7 +38,7 @@
                                             <h5 class="card-title"><%# Eval("Nombre") %></h5>
                                             <p class="card-text"><%# Eval("Descripcion") %></p>
                                             <p class="card-text">Precio: $ <%#Eval("Precio") %></p>
-                                            <asp:Button CssClass="btn-primary" Text="Eliminar" ID="btnEliminar" onclick="btnEliminar_Click" runat="server" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+                                            <asp:Button CssClass="btn-primary" Text="Eliminar" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
                                         </div>
                                     </div>
                                 </div>
@@ -45,7 +47,7 @@
                     </asp:Repeater>
                     <section />
 
-<%--                    <asp:GridView ID="dgvCarrito" runat="server" CssClass="table table-hover" AutoGenerateColumns="false">
+                    <%--                    <asp:GridView ID="dgvCarrito" runat="server" CssClass="table table-hover" AutoGenerateColumns="false">
                     <Columns>
                         <asp:BoundField DataField="CodArticulo" HeaderText="Codigo Articulo" />
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
