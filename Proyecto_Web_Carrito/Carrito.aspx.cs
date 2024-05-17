@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,34 +16,52 @@ namespace Proyecto_Web_Carrito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            if (Session["Seleccionados"] != null)
             {
+                List<Articulos> seleccionados = (List<Articulos>)Session["Seleccionados"];
+
                 if (!IsPostBack)
                 {
-                    List<Articulos> carrito;
-                    carrito = Session["carrito"] != null ? (List<Articulos>)Session["carrito"] : new List<Articulos>();
-                    Session.Add("carrito", carrito);
-
-                    int id = int.Parse(Request.QueryString["id"]);
-
-                    List<Articulos> listaOriginal = (List<Articulos>)Session["listaArticulos"];
-                    Articulos seleccionado = listaOriginal.Find(x => x.IdArticulo == id);
-                    carrito.Add(seleccionado);
-
-                    dgvCarrito.DataSource = carrito;
-                    dgvCarrito.DataBind();
+                    repListado.DataSource = seleccionados;
+                    repListado.DataBind();
                 }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            //if (Session["Seleccionados"] != null)
+            //{
+            //    List<Articulos> seleccionados = (List<Articulos>)Session["Seleccionados"];
+            //    try
+            //    {
+            //        if (!IsPostBack)
+            //        {
+            //            List<Articulos> carrito;
+            //            carrito = Session["carrito"] != null ? (List<Articulos>)Session["carrito"] : new List<Articulos>();
+            //            Session.Add("carrito", carrito);
+
+            //            int id = int.Parse(Request.QueryString["id"]);
+
+            //            List<Articulos> listaOriginal = (List<Articulos>)Session["listaArticulos"];
+            //            Articulos seleccionado = listaOriginal.Find(x => x.IdArticulo == id);
+            //            carrito.Add(seleccionado);
+
+            //            dgvCarrito.DataSource = carrito;
+            //            dgvCarrito.DataBind();
+            //        }
+
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.ToString());
+            //    }
+
+            //}
 
 
         }
 
         protected void FinalizarCompra_Click(object sender, EventArgs e)
         {
+            Session["Seleccionados"] = null;
 
             MessageBox.Show("Que disfrutes tu compra :)");
             Response.Redirect("Default.aspx");

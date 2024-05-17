@@ -15,16 +15,25 @@ namespace Proyecto_Web_Carrito
         public List<Articulos> ListaArticulos;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["listaArticulos"] != null)
+
+            ArticulosNegocio negocio = new ArticulosNegocio();
+            ListaArticulos = negocio.listaParaImagenes();
+
+            if (!IsPostBack)
             {
-                ListaArticulos = (List<Articulos>)Session["listaArticulos"];
+               idRep.DataSource = ListaArticulos;
+               idRep.DataBind();
             }
-            else
-            {
-                ArticulosNegocio negocio = new ArticulosNegocio();
-                ListaArticulos = negocio.ListarArticulosConProcedimiento();
-                Session.Add("listaArticulos", ListaArticulos);
-            }
+            //if (Session["listaArticulos"] != null)
+            //{
+            //    ListaArticulos = (List<Articulos>)Session["listaArticulos"];
+            //}
+            //else
+            //{
+            //    ArticulosNegocio negocio = new ArticulosNegocio();
+            //    ListaArticulos = negocio.ListarArticulosConProcedimiento();
+            //    Session.Add("listaArticulos", ListaArticulos);
+            //}
 
 
         }
@@ -34,7 +43,7 @@ namespace Proyecto_Web_Carrito
             //Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
             List<Articulos> listaFiltrada;
             string filtro = txtBuscar.Text.ToLower();
-            
+
 
             if (filtro.Length >= 2)
             {
@@ -57,6 +66,38 @@ namespace Proyecto_Web_Carrito
             //    }
             //}
 
+        }
+
+        protected void btnAgregarAlCarrito_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int articuloId = Convert.ToInt32(btn.CommandArgument);
+
+            ArticulosNegocio negocio = new ArticulosNegocio();
+            ListaArticulos = negocio.listaParaImagenes();
+
+
+            List<Articulos> seleccionados;
+            if (Session["Seleccionados"] == null)
+            {
+                seleccionados = new List<Articulos>();
+            }
+            else
+            {
+                seleccionados = (List<Articulos>)Session["Seleccionados"];
+            }
+
+            foreach (Articulos item in ListaArticulos)
+            {
+                if (articuloId == item.IdArticulo)
+                {
+                    seleccionados.Add(item);
+                }
+            }
+
+
+            Session["Seleccionados"] = seleccionados;
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
