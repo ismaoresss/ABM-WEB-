@@ -18,7 +18,10 @@
         </div>
     </nav>
     <br>
-    <h2>Lista artículos:</h2>
+
+
+<p class="fs-1 fw-bolder">Lista artículos:</p>
+
 
     <section class="body-def">
         <div class="container">
@@ -35,13 +38,15 @@
                                     <p class="card-text"><%#Eval("Descripcion") %></p>
                                     <h3 class="card-text">$ <%#Eval("Precio") %></h3>
                                 </div>
+
                                 <div class="mt-auto">
-                                <asp:Button ID="btnAgregarAlCarrito" runat="server" CssClass="btn btn-primary" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
-                                <button class="btnVerDetalle">
-                                    <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>'>Detalle del Articulo</a>
-                                    
-                                </button>
-                                
+
+                                    <button class="btnVerDetalle btn btn-primary">
+                                        <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>'>Detalle del Artículo</a>
+                                    </button>
+
+                                    <asp:Button class="btnVerDetalle btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+
                                 </div>
 
 
