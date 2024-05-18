@@ -19,6 +19,8 @@ namespace Proyecto_Web_Carrito
             ArticulosNegocio negocio = new ArticulosNegocio();
             ListaArticulos = negocio.listaParaImagenes();
 
+            Session["Listado"] = ListaArticulos;
+
             if (!IsPostBack)
             {
                 idRep.DataSource = ListaArticulos;

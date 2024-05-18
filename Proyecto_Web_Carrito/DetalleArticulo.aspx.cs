@@ -21,26 +21,30 @@ namespace Proyecto_Web_Carrito
             List<Articulos> listaArt = new List<Articulos>();
             Articulos art = new Articulos();
 
+            if (Session["Listado"] != null)
+            {
+                listaArt = (List<Articulos>)Session["Listado"];
+            }
             try
             {
-
-                if (!IsPostBack)
+                if (Request.QueryString["IdArticulo"] != null)
                 {
-                    if (Request.QueryString["IdArticulo"] != null)
+                    int id = Convert.ToInt32(Request.QueryString["IdArticulo"]);
+                    //art = listaArt.Find(x => x.IdArticulo == id);
+                    foreach (Articulos item in listaArt)
                     {
-                        int id = Convert.ToInt32(Request.QueryString["IdArticulo"]);
-                        art = listaArt.Find(x => x.IdArticulo == id);
-
-                        if (art != null)
+                        if (id == item.IdArticulo)
                         {
-                            txtnombre.Text = art.Nombre;
-                            txtDescripcion.Text = art.Descripcion;
-                            txtPrecio.Text = art.Precio.ToString();
-
-                            repDetalle.DataSource = art.Imagenes;
-                            repDetalle.DataBind();
+                            art = item;
                         }
                     }
+
+                    txtnombre.Text = art.Nombre;
+                    txtDescripcion.Text = art.Descripcion;
+                    txtPrecio.Text = art.Precio.ToString();
+
+                    repDetalle.DataSource = art.Imagenes;
+                    repDetalle.DataBind();
                 }
             }
             catch (Exception ex)
