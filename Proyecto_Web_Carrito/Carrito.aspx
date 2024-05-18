@@ -45,9 +45,9 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    </section>
+                </section>
 
-                    <%--                    <asp:GridView ID="dgvCarrito" runat="server" CssClass="table table-hover" AutoGenerateColumns="false">
+                <%--                    <asp:GridView ID="dgvCarrito" runat="server" CssClass="table table-hover" AutoGenerateColumns="false">
                     <Columns>
                         <asp:BoundField DataField="CodArticulo" HeaderText="Codigo Articulo" />
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
@@ -58,9 +58,9 @@
 
                     </Columns>
                 </asp:GridView>--%>
-                    <a href="Default.aspx" class="btn btn-primary">Volver a la lista de productos</a>
+                <a href="Default.aspx" class="btn btn-primary">Volver a la lista de productos</a>
 
-                    <asp:Button Text="Finalizar Compra" CssClass="btn btn-success" OnClick="FinalizarCompra_Click" runat="server" />
+                <asp:Button Text="Finalizar Compra" CssClass="btn btn-success" OnClick="FinalizarCompra_Click" runat="server" />
             </div>
 
             <div class="productosCompra" id="productosCompra"></div>

@@ -40,20 +40,20 @@ namespace Proyecto_Web_Carrito
 
         protected void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            // Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
+
             List<Articulos> listaFiltrada;
             string filtro = txtBuscar.Text.ToLower();
-
+            // Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
             if (filtro.Length >= 2)
             {
                 listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToLower().Contains(filtro));
             }
             else
             {
-                listaFiltrada = ListaArticulos; // No filtering if less than 2 characters
+                listaFiltrada = ListaArticulos;
             }
 
-            // Update Repeater data source and rebind for immediate filtering
+
             idRep.DataSource = listaFiltrada;
             idRep.DataBind();
         }
