@@ -71,7 +71,7 @@
     <Content Include="Carrito.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetalleArticulo.aspx" />
-    <Content Include="Estilos.css" />
+    <Content Include="EstilosParaIsma.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
