@@ -91,11 +91,16 @@ namespace Proyecto_Web_Carrito
                 {
                     nuloLista.Add(articulos);
                 }
-
-                Session["Seleccionados"] = nuloLista;
-                repListado.DataSource = nuloLista;
-                repListado.DataBind();
+                else
+                {
+                    nuloLista.Remove(articulos);
+                }
             };
+
+            Session["Seleccionados"] = nuloLista;
+            Response.Redirect(Request.RawUrl);
+            repListado.DataSource = nuloLista;
+            repListado.DataBind();
         }
     }
 }
