@@ -71,10 +71,31 @@ namespace Proyecto_Web_Carrito
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            System.Web.UI.WebControls.Button btn = (System.Web.UI.WebControls.Button)sender;
+            int id = Convert.ToInt32(btn.CommandArgument);
+
             List<Articulos> arti = new List<Articulos>();
-            Session["Seleccionados"] = arti;
-            repListado.DataSource = arti;
-            repListado.DataBind();
+            //if (Session["Seleccionados"] != null) 
+            //{
+            arti = (List<Articulos>)Session["Seleccionados"];
+            //}
+            //else
+            //{
+            //    arti = new List<Articulos>();
+            //}
+
+            List<Articulos> nuloLista = new List<Articulos>();
+            foreach (var articulos in arti)
+            {
+                if (articulos.IdArticulo != id)
+                {
+                    nuloLista.Add(articulos);
+                }
+
+                Session["Seleccionados"] = nuloLista;
+                repListado.DataSource = nuloLista;
+                repListado.DataBind();
+            };
         }
     }
 }

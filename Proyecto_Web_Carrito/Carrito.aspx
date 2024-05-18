@@ -35,8 +35,8 @@
                                 <div class="col-md-3 mb-4 article-card">
                                     <div class="card border border-dark font-weight-bold mx-auto h-100" style="width: 18rem;">
                                         <div class="card-body">
-                                            <h5 class="card-title"><%# Eval("Nombre") %></h5>
-                                            <p class="card-text"><%# Eval("Descripcion") %></p>
+                                            <h5 class="card-title">Nombre: <%# Eval("Nombre") %></h5>
+                                            <p class="card-text">Descripcion: <%# Eval("Descripcion") %></p>
                                             <p class="card-text">Precio: $ <%#Eval("Precio") %></p>
                                             <asp:Button CssClass="btn-primary" Text="Eliminar" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
                                         </div>
