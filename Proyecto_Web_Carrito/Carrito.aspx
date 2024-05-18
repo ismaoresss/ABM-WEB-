@@ -45,7 +45,7 @@
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
-                    <section />
+                    </section>
 
                     <%--                    <asp:GridView ID="dgvCarrito" runat="server" CssClass="table table-hover" AutoGenerateColumns="false">
                     <Columns>

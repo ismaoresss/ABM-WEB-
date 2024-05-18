@@ -40,10 +40,9 @@ namespace Proyecto_Web_Carrito
 
         protected void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            //Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
+            // Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
             List<Articulos> listaFiltrada;
             string filtro = txtBuscar.Text.ToLower();
-
 
             if (filtro.Length >= 2)
             {
@@ -51,21 +50,12 @@ namespace Proyecto_Web_Carrito
             }
             else
             {
-                listaFiltrada = ListaArticulos;
+                listaFiltrada = ListaArticulos; // No filtering if less than 2 characters
             }
 
-            if (Session["listaArticulos"] != null)
-            {
-                Session.Add("listaArticulos", listaFiltrada);
-            }
-            //else
-            //{
-            //    if(txtBuscar.Text == "")
-            //    {
-            //        Session.Add("listaArticulos", ListaArticulos);
-            //    }
-            //}
-
+            // Update Repeater data source and rebind for immediate filtering
+            idRep.DataSource = listaFiltrada;
+            idRep.DataBind();
         }
 
         protected void btnAgregarAlCarrito_Click(object sender, EventArgs e)
