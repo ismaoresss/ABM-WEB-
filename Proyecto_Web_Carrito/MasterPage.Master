@@ -24,7 +24,7 @@
                 <div class="container-fluid">
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a class="navbar-brand" href="#">Grupo 24</a>
+                        <a class="navbar-brand" href="Default.aspx">Grupo 24</a>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
@@ -55,9 +55,6 @@
 
             </nav>
 
-
-
-
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
@@ -65,7 +62,11 @@
         <br />
         <footer>
             <div class="car bg-dark text-white" style="text-align: center">
-                <p>Desarrollado por Ismael Oreste, Facundo Pino y Pedro Quiros</p>
+                Desarrollado por 
+                <a href="https://www.linkedin.com/in/ismael-oreste-8b116a254">Ismael Oreste </a>,
+                <a href="https://www.linkedin.com/in/facundopino/">Facundo Pino</a> y
+                <a href="https://www.linkedin.com/in/pedroquiros/">Pedro Quiros </a>
+
             </div>
         </footer>
     </form>
