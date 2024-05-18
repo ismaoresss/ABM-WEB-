@@ -21,40 +21,33 @@ namespace Proyecto_Web_Carrito
             List<Articulos> listaArt = new List<Articulos>();
             Articulos art = new Articulos();
 
-            if (!IsPostBack)
+            try
             {
-                if (Request.QueryString["IdArticulo"] != null)
-                {
-                    int idart = Convert.ToInt32(Request.QueryString["IdArticulo"]);
-                    art = listaArt[idart - 1];
-                    txtnombre.Text = art.Nombre;
-                    txtDescripcion.Text = art.Descripcion;
-                    txtPrecio.Text = art.Precio.ToString();
 
-                    repDetalle.DataBind();
+                if (!IsPostBack)
+                {
+                    if (Request.QueryString["IdArticulo"] != null)
+                    {
+                        int id = Convert.ToInt32(Request.QueryString["IdArticulo"]);
+                        art = listaArt.Find(x => x.IdArticulo == id);
+
+                        if (art != null)
+                        {
+                            txtnombre.Text = art.Nombre;
+                            txtDescripcion.Text = art.Descripcion;
+                            txtPrecio.Text = art.Precio.ToString();
+
+                            repDetalle.DataSource = art.Imagenes;
+                            repDetalle.DataBind();
+                        }
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }
 }
-//if (Request.QueryString["IdArticulo"] != null)
-//{
-//    if (int.TryParse(Request.QueryString["IdArticulo"], out int IdArticulo))
-//    {
-//        if (IdArticulo > 0 && IdArticulo <= listaArt.Count)
-//        {
-//            art = listaArt[IdArticulo - 1];
-//        }
-//        else
-//        {
-//            MessageBox.Show("El numero de Articulo esta fuera de Rango");
-//        }
-//    }
-//}
 
-//if (art != null)
-//{
-//    txtnombre.Text = art.Nombre;
-//    txtDescripcion.Text = art.Descripcion;
-//    txtPrecio.Text = art.Precio.ToString();
-//}
