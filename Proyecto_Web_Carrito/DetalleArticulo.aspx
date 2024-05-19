@@ -7,15 +7,15 @@
 
 <div class="form-group">
     <asp:Label ID="lblnombre" runat="server" Text="Nombre:" CssClass="control-label"></asp:Label>
-    <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
 </div>
 <div class="form-group">
     <asp:Label ID="lbldescripcion" runat="server" Text="Descripcion:" CssClass="control-label"></asp:Label>
-    <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
 </div>
 <div class="form-group">
     <asp:Label ID="lblprecio" runat="server" Text="Precio: $" CssClass="control-label"></asp:Label>
-    <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
 </div>
 
 <div class="imagen-container">
