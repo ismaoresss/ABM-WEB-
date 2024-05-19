@@ -47,17 +47,6 @@
                     </asp:Repeater>
                 </section>
 
-                <%--                    <asp:GridView ID="dgvCarrito" runat="server" CssClass="table table-hover" AutoGenerateColumns="false">
-                    <Columns>
-                        <asp:BoundField DataField="CodArticulo" HeaderText="Codigo Articulo" />
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                        <asp:BoundField DataField="Categorias.Descripcion" HeaderText="Categoria" />
-
-                        <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
-                        <asp:BoundField DataField="Precio" HeaderText="Precio" />
-
-                    </Columns>
-                </asp:GridView>--%>
                 <a href="Default.aspx" class="btn btn-primary">Volver a la lista de productos</a>
 
                 <asp:Button Text="Finalizar Compra" CssClass="btn btn-success" OnClick="FinalizarCompra_Click" runat="server" />

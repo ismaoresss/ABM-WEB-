@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
     <link href="EstilosParaIsma.css" rel="stylesheet" />
 
-
-    <div class="reflected-header" style="text-shadow: 2px 2px #a732da;">
-        <h1>PROGRAMACIÓN 3</h1>
+    <div class="reflected-header">
+        <h1>PROGRAMACIÓN III</h1>
     </div>
 
     <nav class="position-relative py-2 px-4 text-bg-secondary border border-secondary rounded-pill">
@@ -61,10 +60,4 @@
 
 
     <asp:GridView ID="dgvArticulos" runat="server"></asp:GridView>
-    <%--    <div class="row row-cols-1 row-cols-sm-5 g-4 d-flex align-items: center">
-        <% foreach (Dominio.Articulos articulo in ListaArticulos)
-            { %>
-
-        <% } %>
-    </div>--%>
 </asp:Content>

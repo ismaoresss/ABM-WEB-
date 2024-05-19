@@ -30,7 +30,6 @@ namespace Proyecto_Web_Carrito
                 if (Request.QueryString["IdArticulo"] != null)
                 {
                     int id = Convert.ToInt32(Request.QueryString["IdArticulo"]);
-                    //art = listaArt.Find(x => x.IdArticulo == id);
                     foreach (Articulos item in listaArt)
                     {
                         if (id == item.IdArticulo)
@@ -42,9 +41,12 @@ namespace Proyecto_Web_Carrito
                     txtnombre.Text = art.Nombre;
                     txtDescripcion.Text = art.Descripcion;
                     txtPrecio.Text = art.Precio.ToString();
+                    txtmarca.Text = art.Marcas.ToString();
+                    txtCategoria.Text =  art.Categorias.ToString();
 
                     repDetalle.DataSource = art.Imagenes;
                     repDetalle.DataBind();
+
                 }
             }
             catch (Exception ex)

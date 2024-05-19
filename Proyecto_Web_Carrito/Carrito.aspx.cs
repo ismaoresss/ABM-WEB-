@@ -30,35 +30,6 @@ namespace Proyecto_Web_Carrito
 
                 }
             }
-
-            //if (Session["Seleccionados"] != null)
-            //{
-            //    List<Articulos> seleccionados = (List<Articulos>)Session["Seleccionados"];
-            //    try
-            //    {
-            //        if (!IsPostBack)
-            //        {
-            //            List<Articulos> carrito;
-            //            carrito = Session["carrito"] != null ? (List<Articulos>)Session["carrito"] : new List<Articulos>();
-            //            Session.Add("carrito", carrito);
-
-            //            int id = int.Parse(Request.QueryString["id"]);
-
-            //            List<Articulos> listaOriginal = (List<Articulos>)Session["listaArticulos"];
-            //            Articulos seleccionado = listaOriginal.Find(x => x.IdArticulo == id);
-            //            carrito.Add(seleccionado);
-
-            //            dgvCarrito.DataSource = carrito;
-            //            dgvCarrito.DataBind();
-            //        }
-
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.ToString());
-            //    }
-
-            //}
         }
 
         protected void FinalizarCompra_Click(object sender, EventArgs e)
@@ -75,15 +46,9 @@ namespace Proyecto_Web_Carrito
             int id = Convert.ToInt32(btn.CommandArgument);
 
             List<Articulos> arti = new List<Articulos>();
-            //if (Session["Seleccionados"] != null) 
-            //{
+           
             arti = (List<Articulos>)Session["Seleccionados"];
-            //}
-            //else
-            //{
-            //    arti = new List<Articulos>();
-            //}
-
+            
             List<Articulos> nuloLista = new List<Articulos>();
             foreach (var articulos in arti)
             {

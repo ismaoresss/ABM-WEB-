@@ -26,17 +26,6 @@ namespace Proyecto_Web_Carrito
                 idRep.DataSource = ListaArticulos;
                 idRep.DataBind();
             }
-            //if (Session["listaArticulos"] != null)
-            //{
-            //    ListaArticulos = (List<Articulos>)Session["listaArticulos"];
-            //}
-            //else
-            //{
-            //    ArticulosNegocio negocio = new ArticulosNegocio();
-            //    ListaArticulos = negocio.ListarArticulosConProcedimiento();
-            //    Session.Add("listaArticulos", ListaArticulos);
-            //}
-
 
         }
 
@@ -45,7 +34,7 @@ namespace Proyecto_Web_Carrito
 
             List<Articulos> listaFiltrada;
             string filtro = txtBuscar.Text.ToLower();
-            // Criterio de filtracion: Nombre o Codigo de Articulo con al menos 2 caracteres
+            
             if (filtro.Length >= 2)
             {
                 listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToLower().Contains(filtro));
