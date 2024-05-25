@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="DetalleArticulo.aspx.cs" Inherits="Proyecto_Web_Carrito.DetalleArticulo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
+    <link href="EstilosParaIsma.css" rel="stylesheet" />
+
+    <div class="detalle-articulo">
+        <h1>DETALLE ARTICULO</h1>
+    
 
     <div class="form-group">
         <asp:Label ID="lblnombre" runat="server" Text="Nombre:" CssClass="control-label"></asp:Label>
@@ -27,6 +32,7 @@
         <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
     </div>
 
+</div>
     <div class="imagen-container">
         <asp:Repeater runat="server" ID="repDetalle">
             <ItemTemplate>
@@ -34,6 +40,11 @@
                     <img src='<%# Container.DataItem %>' alt="Imagen" class="container mt-4" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4xXXEwlOngpYGhvok77NVHkRONev9pOY_XHZ3M29aA&s';" />
             </ItemTemplate>
         </asp:Repeater>
+    </div>
+
+    <div class="button-container d-flex justify-content-between mt-4">
+        <a href="Default.aspx" class="btn btn-primary btn-back">Volver</a>
+        <asp:Button CssClass="btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al Carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Request.QueryString["IdArticulo"] %>' /> 
     </div>
 
 

@@ -15,6 +15,7 @@ namespace Proyecto_Web_Carrito
 {
     public partial class DetalleArticulo : System.Web.UI.Page
     {
+        public List<Articulos> ListaArticulos;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticulosNegocio articulo = new ArticulosNegocio();
@@ -47,12 +48,51 @@ namespace Proyecto_Web_Carrito
                     repDetalle.DataSource = art.Imagenes;
                     repDetalle.DataBind();
 
+                    btnAgregarAlCarrito.CommandArgument = art.IdArticulo.ToString();
+
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                Response.Write($"<script>alert('Error: {ex.Message}');</script>");
             }
+        }
+
+        protected void btnAgregarAlCarrito_Click(object sender, EventArgs e)
+        {
+            System.Web.UI.WebControls.Button btn = (System.Web.UI.WebControls.Button)sender;
+            string commandArgument = btn.CommandArgument;
+
+            if (int.TryParse(commandArgument, out int articuloId))
+            {
+                ArticulosNegocio negocio = new ArticulosNegocio();
+                ListaArticulos = negocio.listaParaImagenes();
+
+                List<Articulos> seleccionados;
+                if (Session["Seleccionados"] == null)
+                {
+                    seleccionados = new List<Articulos>();
+                }
+                else
+                {
+                    seleccionados = (List<Articulos>)Session["Seleccionados"];
+                }
+
+                Articulos articuloSeleccionado = ListaArticulos.Find(item => item.IdArticulo == articuloId);
+                if (articuloSeleccionado != null)
+                {
+                    seleccionados.Add(articuloSeleccionado);
+                }
+
+                Session["Seleccionados"] = seleccionados;
+                Response.Redirect(Request.RawUrl);
+            }
+            else
+            {
+                // Manejo de error si `commandArgument` no es un entero válido
+                Response.Write("<script>alert('Id de Artículo no válido.');</script>");
+            }
+
         }
     }
 }
