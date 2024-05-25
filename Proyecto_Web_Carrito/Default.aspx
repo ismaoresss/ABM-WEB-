@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
+
     <link href="EstilosParaIsma.css" rel="stylesheet" />
 
     <div class="reflected-header">
@@ -19,7 +20,7 @@
     <br>
 
 
-<p class="fs-1 fw-bolder">Lista artículos:</p>
+    <p class="fs-1 fw-bolder">Lista artículos:</p>
 
 
     <section class="body-def">
@@ -38,14 +39,10 @@
                                     <h3 class="card-text">$ <%#Eval("Precio") %></h3>
                                 </div>
 
-                                <div class="mt-auto">
+                                <div class="mt-auto d-flex justify-content-around">
+                                    <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>' class="btn-link-as-button">Detalle del Artículo</a>
 
-                                    <button class="btnVerDetalle btn btn-primary">
-                                        <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>'>Detalle del Artículo</a>
-                                    </button>
-
-                                    <asp:Button class="btnVerDetalle btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
-
+                                    <asp:Button class="btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
                                 </div>
 
 
