@@ -36,15 +36,17 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><%#Eval("Nombre") %></h5>
                                     <p class="card-text"><%#Eval("Descripcion") %></p>
+
+
                                     <h3 class="card-text">$ <%#Eval("Precio") %></h3>
                                 </div>
 
-                                <div class="mt-auto d-flex justify-content-around">
-                                    <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>' class="btn-link-as-button">Detalle del Artículo</a>
 
-                                    <asp:Button class="btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+                                <div class=" mt-auto d-flex justify-content-around">
+                                    <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>' class="btnEstandar btn-link-as-button">Detalle del Artículo</a>
+
+                                    <asp:Button class="btnEstandar btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
                                 </div>
-
 
                             </div>
                         </div>
