@@ -152,16 +152,28 @@ h1 {
     .detalle-articulo .imagen-container {
         text-align: center;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
         .detalle-articulo .imagen-container img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
     .detalle-articulo .button-container {
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+    }
+    .detalle-articulo .btn {
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
     }
