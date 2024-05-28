@@ -19,9 +19,7 @@
     </nav>
     <br>
 
-
     <p class="fs-1 fw-bolder">Lista artículos:</p>
-
 
     <section class="body-def">
         <div class="container">
@@ -36,16 +34,20 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><%#Eval("Nombre") %></h5>
                                     <p class="card-text"><%#Eval("Descripcion") %></p>
-
-
                                     <h3 class="card-text">$ <%#Eval("Precio") %></h3>
                                 </div>
 
 
                                 <div class=" mt-auto d-flex justify-content-around">
-                                    <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>' class="btnEstandar btn-link-as-button">Detalle del Artículo</a>
+                                    <asp:Button class="btnEstandar btn btn-secondary" ID="btnDecrementar" runat="server" Text="-" OnClick="btnDecrementar_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+                                    <asp:Label ID="lblCantidad" runat="server" Text="1"></asp:Label>
+                                    <asp:Button class="btnEstandar btn btn-secondary" ID="btnIncrementar" runat="server" Text="+" OnClick="btnIncrementar_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+                                    <asp:Button class="btnEstandar btn btn-success" ID="Button1" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+                                </div>
 
-                                    <asp:Button class="btnEstandar btn btn-success" ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CommandArgument='<%# Eval("IdArticulo") %>' CommandName="IdArticulo" />
+
+                                <div class=" d-grid gap-3 col-9 mx-auto">
+                                    <a href='<%# "DetalleArticulo.aspx?IdArticulo=" + Eval("IdArticulo") %>' class="btnEstandar btn-link-as-button">Detalle del Artículo</a>
                                 </div>
 
                             </div>
@@ -55,7 +57,6 @@
             </div>
         </div>
     </section>
-
 
 
     <asp:GridView ID="dgvArticulos" runat="server"></asp:GridView>
