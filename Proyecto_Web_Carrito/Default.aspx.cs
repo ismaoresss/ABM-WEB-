@@ -28,14 +28,16 @@ namespace Proyecto_Web_Carrito
             List<Articulos> listaFiltrada;
             string filtro = txtBuscar.Text.ToLower();
 
-            if (filtro.Length >= 2)
+
+            if (filtro.Length > 2)
             {
-                listaFiltrada = ListaArticulos.FindAll(x => x.Nombre.ToLower().Contains(filtro));
+                List<Articulos> lista = (List<Articulos>)Session["Listado"];
+                listaFiltrada = lista.FindAll(k => k.Nombre.ToLower().Contains(filtro) || k.Descripcion.ToLower().Contains(filtro));
             }
             else
             {
-                listaFiltrada = ListaArticulos;
-            }
+                listaFiltrada = (List<Articulos>)Session["Listado"];
+            }   
 
             idRep.DataSource = listaFiltrada;
             idRep.DataBind();
