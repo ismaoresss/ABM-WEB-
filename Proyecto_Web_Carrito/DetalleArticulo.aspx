@@ -32,7 +32,7 @@
         <div class="form-group">
             <asp:Label ID="lblcategoria" runat="server" Text="Categoria:" CssClass="control-label"></asp:Label>
             <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-
+        </div>
 
             <div class="imagen-container">
                 <asp:Repeater runat="server" ID="repDetalle">
@@ -44,7 +44,30 @@
                 </asp:Repeater>
             </div>
 
-        </div>
+        <!-- Carrusel de imágenes -->
+        <%--<div class="imagen-container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <asp:Repeater ID="repDetalle" runat="server">
+                        <ItemTemplate>
+                            <div class="carousel-item <%# Container.ItemIndex == 0 ? "active" : "" %>">
+                                <img src='<%# Container.DataItem %>' class="d-block w-100 img-fluid mt-1" alt="Imagen del artículo" />
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>--%>
+
+
 
 
     </div>
