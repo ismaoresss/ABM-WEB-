@@ -32,7 +32,7 @@ namespace Proyecto_Web_Carrito
             if (filtro.Length > 2)
             {
                 List<Articulos> lista = (List<Articulos>)Session["Listado"];
-                listaFiltrada = lista.FindAll(k => k.Nombre.ToLower().Contains(filtro) || k.Descripcion.ToLower().Contains(filtro));
+                listaFiltrada = lista.FindAll(k => k.Nombre.ToLower().Contains(filtro));
             }
             else
             {
