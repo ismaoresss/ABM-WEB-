@@ -37,7 +37,7 @@ namespace Proyecto_Web_Carrito
             else
             {
                 listaFiltrada = (List<Articulos>)Session["Listado"];
-            }   
+            }
 
             idRep.DataSource = listaFiltrada;
             idRep.DataBind();
